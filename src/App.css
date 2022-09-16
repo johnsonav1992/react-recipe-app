@@ -1,0 +1,205 @@
+/* --------- This is CSS Reset Code --------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+:root {
+	font-family: sans-serif;
+}
+
+/* --------- Begin your CSS Below here --------- */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-header {
+	background-color: #db7533;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 40px;
+	color: white;
+}
+
+.header-title {
+	margin-left: 3rem;
+}
+
+nav {
+	margin-right: 1rem;
+}
+
+.main-header button {
+	border: none;
+	background-color: transparent;
+}
+
+.main-header button a {
+	color: white;
+	text-decoration: none;
+}
+
+.main-header button a:hover {
+	color: #ffc49d;
+}
+
+.main-footer {
+	background-color: #3e3e3e;
+	height: 150px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* position: fixed;
+	bottom: 0; */
+	width: 100vw;
+}
+
+.main-footer > svg {
+	margin-right: 3rem;
+}
+
+.social-wrapper {
+	margin-left: 3rem;
+	color: white;
+	text-align: center;
+}
+
+.social-wrapper svg {
+	margin: .5rem;
+}
+
+.ad-banner-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 40vh;
+	width: 100%;
+}
+
+.banner-desc {
+	height: 100%;
+	width: 65%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.new {
+	font-size: .75rem;
+}
+
+.food-title {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #db7533;
+}
+
+.desc-text {
+	text-align: center;
+	font-size: .9rem;
+}
+
+.blue-btn {
+	background-color: #578a8b;
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	border-radius: .1rem;
+}
+
+.blue-btn:hover {
+	background-color: #69a5a6;
+	cursor: pointer;
+}
+
+.recipe-cards-container {
+	display: flex;
+	gap: 1.5rem;
+	min-height: min-content;
+	margin: 2rem;
+	margin-top: 0;
+}
+
+.recipe-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 150px;
+	min-height: 225px;
+	box-shadow: 0px 2px 3px 0px gray;
+	border-radius: .1rem;
+	padding-bottom: 1rem;
+}
+
+.image-title-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.recipe-card h3 {
+	font-size: .9rem;
+}
+
+.recipe-card img {
+	width: 100%;
+}
+
+.search-wrapper {
+	position: relative;
+	margin: 1rem;
+}
+
+.search-input {
+	background-color: #f6dfd1;
+	border: none;
+	border-radius: 100px;
+	padding: .25rem;
+	padding-left: 1.5rem;
+	width: 200px;
+}
+
+.search-input:focus {
+	outline: none;
+}
+
+.mag {
+	width: 18px;
+	position: absolute;
+	left: 3px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+.search-input::placeholder {
+	color: rgb(38, 38, 38);
+}
