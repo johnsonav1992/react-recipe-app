@@ -13,8 +13,6 @@ const DetailScreen = () => {
 		})
 	}, [id])
 
-  console.log(recipe)
-
 	return (
 		<>
 			<div
@@ -51,7 +49,7 @@ const DetailScreen = () => {
 					<h2 className="instructions-title">Instructions</h2>
 					<article className="instructions-text">
 						<p style={{ whiteSpace: 'pre-wrap' }}>
-							{recipe.instructions }
+							{recipe.instructions && JSON.parse(JSON.stringify(recipe.instructions))}
 						</p>
 					</article>
 				</div>

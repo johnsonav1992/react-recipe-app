@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Formik } from 'formik'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const NewRecipeScreen = () => {
 	const [ingredients, setIngredients] = useState([])
@@ -116,7 +117,9 @@ const NewRecipeScreen = () => {
 									onChange={e => setQuantity(e.target.value)}
 								/>
 							</fieldset>
-							<ul className="output">Output here</ul>
+							<ul className="output">
+                {ingredients.map(ingredient => <li key={ingredient.name}>{ingredient.quantity} {ingredient.name}</li>)}
+              </ul>
 						</div>
 						<button
 							type="button"
