@@ -1,17 +1,85 @@
 /* --------- This is CSS Reset Code --------- */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -20,7 +88,9 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 
@@ -68,14 +138,16 @@ nav {
 	color: #ffc49d;
 }
 
+.main-header a {
+	text-decoration: none;
+	color: white;
+}
 .main-footer {
 	background-color: #3e3e3e;
 	height: 150px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/* position: fixed;
-	bottom: 0; */
 	width: 100vw;
 }
 
@@ -90,7 +162,7 @@ nav {
 }
 
 .social-wrapper svg {
-	margin: .5rem;
+	margin: 0.5rem;
 }
 
 .ad-banner-wrapper {
@@ -99,6 +171,29 @@ nav {
 	justify-content: center;
 	min-height: 40vh;
 	width: 100%;
+}
+
+.details-banner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 40vh;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.food-title {
+	z-index: 11;
+}
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 10;
+	position: absolute;
 }
 
 .banner-desc {
@@ -112,7 +207,7 @@ nav {
 }
 
 .new {
-	font-size: .75rem;
+	font-size: 0.75rem;
 }
 
 .food-title {
@@ -123,7 +218,7 @@ nav {
 
 .desc-text {
 	text-align: center;
-	font-size: .9rem;
+	font-size: 0.9rem;
 }
 
 .blue-btn {
@@ -131,7 +226,7 @@ nav {
 	border: none;
 	color: white;
 	padding: 5px 10px;
-	border-radius: .1rem;
+	border-radius: 0.1rem;
 }
 
 .blue-btn:hover {
@@ -155,7 +250,7 @@ nav {
 	max-width: 150px;
 	min-height: 225px;
 	box-shadow: 0px 2px 3px 0px gray;
-	border-radius: .1rem;
+	border-radius: 0.1rem;
 	padding-bottom: 1rem;
 }
 
@@ -166,7 +261,7 @@ nav {
 }
 
 .recipe-card h3 {
-	font-size: .9rem;
+	font-size: 0.9rem;
 }
 
 .recipe-card img {
@@ -182,7 +277,7 @@ nav {
 	background-color: #f6dfd1;
 	border: none;
 	border-radius: 100px;
-	padding: .25rem;
+	padding: 0.25rem;
 	padding-left: 1.5rem;
 	width: 200px;
 }
@@ -199,7 +294,44 @@ nav {
 	transform: translateY(-50%);
 }
 
-
 .search-input::placeholder {
 	color: rgb(38, 38, 38);
+}
+
+.recipe-details-section {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 4rem;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+}
+
+.recipe-details-section p {
+	align-self: flex-start;
+}
+
+.details {
+	min-width: 200px;
+	padding: 1rem;
+}
+
+.instructions {
+	min-width: 300px;
+	padding: 1rem;
+}
+
+.recipe-card.instructions {
+	justify-content: flex-start;
+}
+
+.recipe-header,
+.ingredients-header,
+.instructions-title {
+	font-size: 1.65rem;
+	padding-bottom: 0.5rem;
+}
+
+.ingredients-header {
+	margin-top: 0.5rem;
 }

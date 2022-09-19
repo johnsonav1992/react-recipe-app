@@ -5,11 +5,11 @@ import mag from '../../assets/icons8-search.svg'
 import AdBanner from './AdBanner'
 import RecipeCard from '../newRecipeComponents/RecipeCard'
 
+export const url = 'https://recipes.devmountain.com'
+
 const HomeScreen = () => {
 	const [recipes, setRecipes] = useState([])
 	const [search, setSearch] = useState('')
-
-	const url = 'https://recipes.devmountain.com'
 
 	const getRecipes = () => {
 		axios.get(`${url}/recipes`).then(res => {
@@ -20,7 +20,7 @@ const HomeScreen = () => {
 	let filteredRecipes = recipes.filter(
 		recipe =>
 			recipe.recipe_name.toLowerCase().includes(search.toLowerCase()) &&
-			recipe.recipe_name != 'undefined'
+			recipe.recipe_name !== 'undefined'
 	)
 
 	useEffect(() => {
@@ -41,9 +41,9 @@ const HomeScreen = () => {
 				<img className="mag" src={mag} alt="magnifying glass" />
 			</div>
 			<main className="recipe-cards-container">
-				{filteredRecipes.map(recipe => (
+				{filteredRecipes.length > 0 ? filteredRecipes.map(recipe => (
 					<RecipeCard recipe={recipe} key={recipe.recipe_id} />
-				))}
+				)) : <p>There are no recipes with that name.</p> }
 			</main>
 		</div>
 	)
