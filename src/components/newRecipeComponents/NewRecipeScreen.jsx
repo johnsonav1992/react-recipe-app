@@ -28,7 +28,7 @@ const NewRecipeScreen = () => {
 	function onSubmit(values) {
 		values.ingredients = ingredients
 		console.log(values)
-		axios.post(`https://recipes.devmountain.com/recipes`, values)
+		// axios.post(`https://recipes.devmountain.com/recipes`, values)
 	}
 
 	return (
@@ -58,7 +58,7 @@ const NewRecipeScreen = () => {
 								type="radio"
 								id="cook"
 								name="type"
-								value={values.type}
+								value="cook"
 								onChange={handleChange}
 							/>
 							<label htmlFor="cook">Cook</label>
@@ -66,7 +66,7 @@ const NewRecipeScreen = () => {
 								type="radio"
 								id="bake"
 								name="type"
-								value={values.type}
+								value="bake"
 								onChange={handleChange}
 							/>
 							<label htmlFor="bake">Bake</label>
@@ -74,7 +74,7 @@ const NewRecipeScreen = () => {
 								type="radio"
 								id="drink"
 								name="type"
-								value={values.type}
+								value="drink"
 								onChange={handleChange}
 							/>
 							<label htmlFor="drink">Drink</label>

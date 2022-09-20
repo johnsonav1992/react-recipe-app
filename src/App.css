@@ -100,12 +100,20 @@ video {
 }
 
 /* --------- Begin your CSS Below here --------- */
+.app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: space-between;
+}
 
 .main-content {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	height: min-content;
+	flex-basis: 100%;
 }
 
 .container {
@@ -157,8 +165,8 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	width: 100vw;
-	position: absolute;
-	bottom: 0;
+	/* position: absolute;
+	bottom: 0; */
 }
 
 .main-footer > svg {
@@ -179,16 +187,20 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 40vh;
+	min-height: 50vh;
 	width: 100vw;
+}
+
+.detail {
+	height: min-content;
 }
 
 .details-banner {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 40vh;
-	width: 100%;
+	min-height: 50vh;
+	width: 100vw;
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -213,7 +225,7 @@ nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 1rem;
+	gap: 1.5rem;
 }
 
 .new {
@@ -257,7 +269,7 @@ nav {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	gap: 2rem;
+	gap: 1rem;
 	max-width: 150px;
 	min-height: min-content;
 	box-shadow: 0px 2px 3px 0px gray;
@@ -318,6 +330,7 @@ nav {
 	gap: 4rem;
 	padding-top: 1rem;
 	padding-bottom: 2rem;
+	height: min-content;
 }
 
 .recipe-details-section p {

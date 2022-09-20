@@ -10,16 +10,18 @@ const DetailScreen = () => {
 	useEffect(() => {
 		axios.get(`${url}/recipes/${id}`).then(res => {
 			setRecipe(res.data)
+			console.log(res.data)
 		})
 	}, [id])
 
 	return (
-		<>
+		<div className="detail">
 			<div
 				className="details-banner"
-        style={{ backgroundImage: `url(${recipe.image_url})`}}
-
-			> <div className="overlay"></div>
+				style={{ backgroundImage: `url(${recipe.image_url})` }}
+			>
+				{' '}
+				<div className="overlay"></div>
 				<h1 className="food-title">{recipe.recipe_name}</h1>
 			</div>
 			<section className="recipe-details-section">
@@ -29,7 +31,7 @@ const DetailScreen = () => {
 					<p className="cook-time">Cook Time: {recipe.cook_time}</p>
 					<p className="serves">Serves: {recipe.serves}</p>
 					<h2 className="ingredients-header">Ingredients</h2>
-					{recipe.ingredients > 0 ? (
+					{recipe.ingredients ? (
 						recipe.ingredients.map(ingredient => {
 							return (
 								<p
@@ -54,7 +56,7 @@ const DetailScreen = () => {
 					</article>
 				</div>
 			</section>
-		</>
+		</div>
 	)
 }
 
