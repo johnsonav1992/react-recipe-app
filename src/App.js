@@ -9,13 +9,18 @@ import Header from './components/Header'
 
 function App() {
 	return (
-		<div className="App">
+		<div className="app">
 			<Header />
-			<Routes>
-				<Route index element={<HomeScreen />}></Route>
-				<Route path="newRecipe" element={<NewRecipeScreen />}></Route>
-				<Route path="recipe/:id" element={<DetailScreen />}></Route>
-			</Routes>
+			<main className="main-content">
+				<Routes>
+					<Route index element={<HomeScreen />}></Route>
+					<Route
+						path="newRecipe"
+						element={<NewRecipeScreen />}
+					></Route>
+					<Route path="recipe/:id" element={<DetailScreen />}></Route>
+				</Routes>
+			</main>
 			<Footer />
 		</div>
 	)

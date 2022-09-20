@@ -13,7 +13,7 @@ const RecipeCard = ({ recipe }) => {
 			<div className="image-title-wrapper">
 				<div className="img-wrapper">
 					<img
-						src="https://images.immediate.co.uk/production/volatile/sites/30/2022/03/Vegan-kebabs-3322e41.jpg"
+						src={recipe.image_url}
 						alt=""
 					/>
 				</div>

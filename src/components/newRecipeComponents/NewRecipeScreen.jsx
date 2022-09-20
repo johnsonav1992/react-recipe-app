@@ -117,9 +117,19 @@ const NewRecipeScreen = () => {
 									onChange={e => setQuantity(e.target.value)}
 								/>
 							</fieldset>
-							<ul className="output">
-                {ingredients.map(ingredient => <li key={ingredient.name}>{ingredient.quantity} {ingredient.name}</li>)}
-              </ul>
+							<div className="ing-container">
+								<h3 className="ingredients-list">
+									Ingredients List
+								</h3>
+								<ul className="output">
+									{ingredients.map(ingredient => (
+										<li key={ingredient.name}>
+											{ingredient.quantity}{' '}
+											{ingredient.name}
+										</li>
+									))}
+								</ul>
+							</div>
 						</div>
 						<button
 							type="button"
@@ -133,10 +143,13 @@ const NewRecipeScreen = () => {
 							id="instructions"
 							cols="30"
 							rows="10"
+							placeholder="What are the instructions?"
 							value={values.instructions}
 							onChange={handleChange}
 						></textarea>
-						<button type="submit">Save</button>
+						<button type="submit" className="blue-btn">
+							Save
+						</button>
 					</form>
 				)}
 			</Formik>
