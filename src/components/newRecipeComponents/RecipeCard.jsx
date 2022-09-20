@@ -12,14 +12,13 @@ const RecipeCard = ({ recipe }) => {
 		<div className="recipe-card">
 			<div className="image-title-wrapper">
 				<div className="img-wrapper">
-					<img
-						src={recipe.image_url}
-						alt=""
-					/>
+					<img src={recipe.image_url} alt="" />
 				</div>
 				<h3>{recipe.recipe_name}</h3>
 			</div>
-			<button className="blue-btn" onClick={handleClick}>See More</button>
+			<button className="blue-btn" onClick={handleClick}>
+				See More
+			</button>
 		</div>
 	)
 }

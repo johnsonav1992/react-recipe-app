@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Formik } from 'formik'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 
 const NewRecipeScreen = () => {
 	const [ingredients, setIngredients] = useState([])
@@ -28,7 +27,14 @@ const NewRecipeScreen = () => {
 	function onSubmit(values) {
 		values.ingredients = ingredients
 		console.log(values)
-		// axios.post(`https://recipes.devmountain.com/recipes`, values)
+		axios
+			.post(`https://recipes.devmountain.com/recipes`, values)
+			.then(res => {
+				console.log(res.data)
+			})
+			.catch(err => {
+				console.error(err)
+			})
 	}
 
 	return (

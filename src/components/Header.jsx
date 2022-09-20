@@ -3,8 +3,10 @@ import React from 'react'
 
 const Header = () => {
 	return (
-		<header className='main-header'>
-			<h2 className='header-title'><Link to="/">Devmountain Eatery</Link></h2>
+		<header className="main-header">
+			<h2 className="header-title">
+				<Link to="/">Devmountain Eatery</Link>
+			</h2>
 			<nav>
 				<button>
 					<Link to="/">Home</Link>

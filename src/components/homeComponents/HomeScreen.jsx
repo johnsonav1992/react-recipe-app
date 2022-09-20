@@ -41,9 +41,13 @@ const HomeScreen = () => {
 				<img className="mag" src={mag} alt="magnifying glass" />
 			</div>
 			<main className="recipe-cards-container">
-				{filteredRecipes.length > 0 ? filteredRecipes.map(recipe => (
-					<RecipeCard recipe={recipe} key={recipe.recipe_id} />
-				)) : <p>There are no recipes with that name.</p> }
+				{filteredRecipes.length > 0 ? (
+					filteredRecipes.map(recipe => (
+						<RecipeCard recipe={recipe} key={recipe.recipe_id} />
+					))
+				) : (
+					<p>There are no recipes with that name.</p>
+				)}
 			</main>
 		</div>
 	)
