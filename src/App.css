@@ -258,10 +258,13 @@ nav {
 
 .recipe-cards-container {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: 1.5rem;
 	min-height: min-content;
 	margin: 2rem;
 	margin-top: 0;
+	max-width: 75%;
 }
 
 .recipe-card {
